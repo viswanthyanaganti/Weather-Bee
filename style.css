@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(background.jpg);
+    
+    flex-direction: column;
+   
+}
+
+.top-left-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer; /* Optional: shows it's clickable */
+    background: rgb(255, 255, 255,0.1);
+    border: 2px solid rgba(255,255,255, .5);
+    backdrop-filter: blur(10px);
+  }
+  
+  .top-left-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+  
+  .top-left-icon:hover {
+    background: rgb(0, 0, 0,0.1);
+    backdrop-filter: blur(10px);
+  }
+
+.container{
+    width: 400px;
+    height: min-content;
+    /*background-color: #fff;*/
+    background: rgb(255, 255, 255,0.1);
+    border: 2px solid rgba(255,255,255, .5);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 28px;
+    
+}
+
+
+
+.note p{
+    margin-top: 10px;
+    margin-left: 250px;
+    color: #fff;
+}
+
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-box input{
+    width: 84%;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #000;
+    background-color: #e6f5fb;
+    padding: 12px 16px;
+    border-radius: 14px;
+}
+
+.search-box input::placeholder{
+    color: #000;
+}
+
+.search-box button{
+    width: 46px;
+    height: 46px;
+    background-color: #e6f5fb;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-box button:hover{
+    color: #fff;
+    background-color: #2d2d2d;
+}
+
+.weather-body{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 20px;
+    display: none;
+}
+.weather-body img{
+    width: 60%;
+}
+
+.weather-box{
+    margin-block: 20px;
+    text-align: center;
+}
+
+.weather-box .temperature{
+    font-size: 40px;
+    font-weight: 800;
+    position: relative;
+}
+
+.weather-box .temperature sup{
+    font-size: 20px;
+    position: absolute;
+    font-weight: 600;
+}
+
+.weather-box .description{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.humidity, .wind{
+    display: flex;
+    align-items: center;
+}
+
+.humidity{
+    margin-left: 20px;
+}
+
+.wind{
+    margin-right: 20px;
+}
+
+.weather-details i{
+    font-size: 36px;
+}
+
+.weather-details .text{
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.text span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.location-not-found{
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-not-found h1{
+    font-size: 20px;
+    color: #e6f5fb;
+    margin-block-end: 15px;
+}
+
+.location-not-found p{
+    color: #e6f5fb;
+    margin-block-end: 15px;
+}
+.location-not-found img{
+    width: 80%;
+}
+
+
+
+
+
+
+
+
+
+/* Container for bottom-left vertical buttons */
+.bottom-left-buttons {
+    position: fixed; /* Fix the position relative to the viewport */
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left */
+    display: flex;
+    flex-direction: column; /* Arrange buttons vertically */
+    gap: 10px; /* Space between buttons */
+    z-index: 1000; /* Ensure it appears above other content */
+    
+  }
+
+  .bottom-left-buttons a{
+    text-decoration: none;
+  }
+  
+  /* Button styling */
+  .custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between text and arrow/icon */
+    gap: 8px; /* Space between text and icon */
+    background: rgb(255, 255, 255,0.1);
+    backdrop-filter: blur(10px);
+    
+    color: white;
+    border: none;
+    border-radius: 20px; /* Rounded edges */
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 200px; /* Set a fixed width for uniform buttons */
+  }
+  
+  /* Arrow icon styling */
+  .custom-button .arrow {
+    font-size: 1.2rem;
+  }
+  
+  /* Text icon styling */
+  .custom-button .icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Hover effect */
+  .custom-button:hover {
+    background: rgb(0, 0, 0,0.1);
+    backdrop-filter: blur(10px);
+    transform: translateX(5px); /* Move slightly to the right */
+  }
+  
+
+  @media (max-width: 768px) {
+    .container {
+        width: 340px;
+    }
+
+    
+}
